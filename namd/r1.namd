@@ -61,11 +61,13 @@ set md_steps       1000
 ]
 
 ::namd::T [dict create \
-    T 0 \
-    T_final $temperature \
-    step 31 \
-    freq 100 \
+    T $temperature \
     isRestart $isRestart \
+]
+
+::namd::LangevinT [dict create \
+    T             $temperature \
+    isRestart     $isRestart \
 ]
 
 ::namd::LangevinP [dict create \
