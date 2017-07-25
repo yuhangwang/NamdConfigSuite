@@ -1,0 +1,9 @@
+*.xsc
+*.xst
+*.coor
+*.dcd
+*.vel
+*.old
+*output
+namd/FFTW*
+log

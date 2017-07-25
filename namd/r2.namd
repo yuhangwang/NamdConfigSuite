@@ -44,6 +44,7 @@ set md_steps       [::namd::stepsToRun \
 ]
 
 ::namd::interaction [dict create \
+    switch_dist  10.0 \
     cutoff       12.0 \
 ]
 
