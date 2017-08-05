@@ -67,7 +67,6 @@ set md_steps       1000
 
 ::namd::LangevinT [dict create \
     T             $temperature \
-    isRestart     $isRestart \
 ]
 
 ::namd::LangevinP [dict create \
