@@ -1,5 +1,6 @@
 source module/Apps.tm
 
+
 ######################################################
 # Author: Steven(Yuhang) Wang
 # License: CC BY 4.0 (creativecommons.org/licenses/by/4.0)
@@ -74,6 +75,15 @@ set md_steps       1000
     constant_area  yes \
     constant_ratio no \
     T              $temperature \
+]
+
+::namd::Dielectric 1
+
+::namd::gridForce [list \
+    [dict create \
+        dx "../map/map.dx" \
+        label "../restraint/sodium.pdb" \
+    ] \
 ]
 
 ::namd::minimize  $em_steps
